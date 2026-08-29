@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <style>
+        #meuamor {
+            opacity: 1;
+            transition: opacity 0.5s ease;
+        }
+
+        #meuamor.fade {
+            opacity: 0;
+        }
+    </style>
+</head>
+
+
+
+<body>
+
+    <div><button id="botaoCarregar" onclick="carregarDiv()">Carregando cervejas...</button></div>
+    <div id="meuamor"></div>
+
+</body>
+
+
+
+<script>
+
+
+    function carregarDiv() {
+
+        let div = document.getElementById("meuamor");
+
+        // Fade out
+        div.classList.add("fade");
+
+        setTimeout(function () {
+
+            if (div.innerHTML === "") {
+
+                div.innerHTML = `<h1>Guinness</h1>`;
+
+            } else {
+
+                div.innerHTML = "";
+
+            }
+
+            // Fade in
+            div.classList.remove("fade");
+
+        }, 500);
+
+    }
+
+
+
+
+
+</script>
+
+</html>
