@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <style>
+        table {
+            border-collapse: collapse;
+            margin-top: 10px;
+            width: 20%;
+        }
+
+        th {
+            border: 1px solid black;
+            padding: 10px;
+            background-color: rgb(218, 142, 233);
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 10px;
+            background-color: rgb(243, 226, 248);
+
+        }
+
+        button {
+            margin-right: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Botões -->
+    <div id="botoes">
+
+        <button id="botaoCarregar">
+            Mostrar cervejas
+        </button>
+
+        <button id="botaoOrdenar">
+            Mostrar cervejas ordenadas
+        </button>
+
+        <button id="botaoEmbaralhar">
+            Embaralhar cervejas
+        </button>
+
+    </div>
+
+    <!-- Onde a tabela será exibida -->
+    <div id="meu-amor"></div>
+
+
+    <script>
+
+        let cervejas = ["Guiness", "Desperados", "Becks"]
+
+
+        function transformar(item) {
+
+            return `<tr><td>${item}</td></tr>`
+
+        }
+
+
+        function carregarDiv() {
+
+            let div = document.getElementById("meu-amor")
+
+            let cervejasHtml = cervejas.map(transformar)
+
+            div.innerHTML = `
+                <table>
+
+                    <tr>
+                        <th>Cervejas</th>
+                    </tr>
+
+                    ${cervejasHtml.join("\n")}
+
+                </table>
+            `
+
+        }
+
+
+        function ordenarCervejas() {
+
+            cervejas.sort()
+
+            carregarDiv()
+
+        }
+
+
+        function embaralharCervejas() {
+
+            cervejas.sort(() => Math.random() - 0.5)
+
+            carregarDiv()
+
+        }
+
+
+        let botao = document.getElementById("botaoCarregar")
+
+        botao.addEventListener("click", carregarDiv)
+
+
+        let botaoOrdenar = document.getElementById("botaoOrdenar")
+
+        botaoOrdenar.addEventListener("click", ordenarCervejas)
+
+
+        let botaoEmbaralhar = document.getElementById("botaoEmbaralhar")
+
+        botaoEmbaralhar.addEventListener("click", embaralharCervejas)
+
+    </script>
+
+</body>
+
+</html>
