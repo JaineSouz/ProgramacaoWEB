@@ -1,0 +1,42 @@
+p.verso {
+    color: blue;
+}
+
+p.mote {
+    color: red;
+}
+
+.link {
+    color: blue;
+}
+
+.link:visited {
+    color: purple;
+}
+
+.link:hover {
+    color: green;
+}
+
+.avatar {
+    vertical-align: middle;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.poeta img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+th {
+    background-color: lightblue;
+    color: black;
+    padding: 10px;
+}
+
+table {
+    width: 200px;
+}
