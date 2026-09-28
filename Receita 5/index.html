@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <div>
+        <a href="#" id="botaoCarregar">Carregar roupas</a>
+    </div>
+
+    <div id="meu amor"></div>
+
+</body>
+
+<script>
+
+    let roupas = ["Camisa", "Calça", "Vestido"]
+
+    const carregarDiv = (itens) => {
+
+        const div = document.getElementById("meu amor")
+
+        const roupasHtml = itens.map(item => `<h1>${item}</h1>`)
+
+        div.innerHTML = `${roupasHtml.join("\n")}`
+    }
+
+    let botao = document.getElementById("botaoCarregar")
+
+    botao.addEventListener("click", (evento) => {
+        evento.preventDefault()
+        carregarDiv(roupas)
+    })
+
+</script>
+
+</html>
