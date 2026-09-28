@@ -1,0 +1,165 @@
+```html
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+   <meta charset="UTF-8">
+
+   <title>Cervejas</title>
+
+   <style>
+      body {
+         font-family: Arial, sans-serif;
+         background-color: #f5f5f5;
+         margin: 40px;
+      }
+
+      button {
+         padding: 10px 20px;
+         background-color: #333;
+         color: white;
+         border: none;
+         border-radius: 5px;
+         cursor: pointer;
+         margin-bottom: 20px;
+      }
+
+      button:hover {
+         background-color: #555;
+      }
+
+      table {
+         border-collapse: collapse;
+         width: 80%;
+         background-color: white;
+         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      }
+
+      th,
+      td {
+         border: 1px solid #ddd;
+         padding: 12px;
+         text-align: left;
+      }
+
+      th {
+         background-color: #333;
+         color: white;
+      }
+
+      tr:nth-child(even) {
+         background-color: #f2f2f2;
+      }
+
+      tr:hover {
+         background-color: #ddd;
+      }
+   </style>
+
+</head>
+
+
+<body>
+
+   <div>
+      <button id="botaoCarregar">Carregar cervejas...</button>
+   </div>
+
+   <div id="cervejasDiv"></div>
+
+
+   <script>
+
+      let cervejas = [
+
+         {
+            name: "Guiness",
+            alcohol: "10%",
+            style: "Imperial Stout",
+            ibu: "40"
+         },
+
+         {
+            name: "Desperados",
+            alcohol: "6%",
+            style: "Lager",
+            ibu: "25"
+         },
+
+         {
+            name: "Becks",
+            alcohol: "5%",
+            style: "Pilsen",
+            ibu: "20"
+         }
+
+      ];
+
+
+      // cs = array de cervejas
+      // id = id da div onde a tabela será carregada
+      // hName, hAlcohol, hStyle e hIbu = cabeçalhos
+      // pName, pAlcohol, pStyle e pIbu = propriedades dos objetos
+
+      const carregarDiv = (
+         cs,
+         id = "cervejasDiv",
+         hName = "Nome",
+         hAlcohol = "Álcool",
+         hStyle = "Estilo",
+         hIbu = "Amargor",
+         pName = "name",
+         pAlcohol = "alcohol",
+         pStyle = "style",
+         pIbu = "ibu"
+      ) => {
+
+         const div = document.getElementById(id);
+
+
+         const cabecalho = `
+                <tr>
+                    <th>${hName}</th>
+                    <th>${hAlcohol}</th>
+                    <th>${hStyle}</th>
+                    <th>${hIbu}</th>
+                </tr>
+            `;
+
+
+         const itensHtml = cs.map(item => `
+                <tr>
+                    <td>${item[pName]}</td>
+                    <td>${item[pAlcohol]}</td>
+                    <td>${item[pStyle]}</td>
+                    <td>${item[pIbu]}</td>
+                </tr>
+            `);
+
+
+         div.innerHTML = `
+                <table>
+                    ${cabecalho}
+                    ${itensHtml.join("\n")}
+                </table>
+            `;
+
+      };
+
+
+      let botao = document.getElementById("botaoCarregar");
+
+
+      botao.addEventListener(
+         "click",
+         () => carregarDiv(cervejas)
+      );
+
+   </script>
+
+</body>
+
+</html>
+```
