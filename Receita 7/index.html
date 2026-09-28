@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Posts</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f5f5f5;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            background-color: white;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="botaoCarregar">Carregar posts</button>
+
+    <div id="usuariosDiv"></div>
+
+    <script type="module">
+
+        import { montarTabela } from "./tabela.js"
+
+        async function carregarPosts() {
+
+            let res = await fetch(
+                "https://jsonplaceholder.typicode.com/posts"
+            )
+
+            let posts = await res.json()
+
+            let tabela = montarTabela(posts)
+
+            document.getElementById("usuariosDiv").innerHTML = tabela
+        }
+
+        let botao = document.getElementById("botaoCarregar")
+
+        botao.addEventListener(
+            "click",
+            () => carregarPosts()
+        )
+
+    </script>
+
+</body>
+
+</html>
