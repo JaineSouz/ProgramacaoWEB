@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>React Um</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 500px;
+        }
+
+        th,
+        td {
+            border: 1px solid #999;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #ddd;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="app"></div>
+
+    <script src="../libs/react.js"></script>
+    <script src="../libs/react-dom.js"></script>
+    <script src="../libs/babel.js"></script>
+
+    <script type="text/babel">
+
+        // Array fixo de objetos
+        const bebidas = [
+            {
+                nome: "Havana",
+                marca: "Engenho Anísio Santiago"
+            },
+            {
+                nome: "Ypióca",
+                marca: "Ypióca"
+            },
+            {
+                nome: "51",
+                marca: "Cia Müller de Bebidas"
+            }
+        ];
+
+
+        // Cabeçalho
+        function Cabecalho() {
+            return (
+                <h1>Minha tabela de bebidas</h1>
+            );
+        }
+
+
+        // Tabela
+        function TabelaBebidas() {
+            return (
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Marca</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {bebidas.map(bebida => (
+                            <tr>
+                                <td>{bebida.nome}</td>
+                                <td>{bebida.marca}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            );
+        }
+
+
+        // Função executada quando o botão for clicado
+        function mostrarTabela() {
+            ReactDOM.render(
+                <div>
+                    <Cabecalho />
+                    <TabelaBebidas />
+                </div>,
+                document.getElementById("app")
+            );
+        }
+
+
+        // Tela inicial
+        function App() {
+            return (
+                <div>
+                    <Cabecalho />
+
+                    <button onClick={mostrarTabela}>
+                        Mostrar tabela
+                    </button>
+                </div>
+            );
+        }
+
+
+        // Primeira renderização
+        ReactDOM.render(
+            <App />,
+            document.getElementById("app")
+        );
+
+    </script>
+
+</body>
+
+</html>
