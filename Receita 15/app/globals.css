@@ -1,0 +1,164 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+  min-height: 100vh;
+}
+
+/* Navbar Global (app/layout.js) */
+.navbar {
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 14px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.navbar-brand {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #4f46e5;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #475569;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  background: #f1f5f9;
+  color: #4f46e5;
+}
+
+/* Área de Conteúdo Principal */
+.main-wrapper {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.container {
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+  border: 1px solid #e2e8f0;
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+p {
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+/* Estilo do Layout Aninhado (app/novarota/layout.js) */
+.nested-layout-box {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 2px dashed #818cf8;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.06);
+}
+
+.nested-header {
+  background: #eef2ff;
+  border: 1px solid #c7d2fe;
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 24px;
+}
+
+.nested-badge {
+  display: inline-block;
+  background: #4f46e5;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 8px;
+}
+
+.nested-header h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #312e81;
+  margin-bottom: 4px;
+}
+
+.nested-header p {
+  font-size: 0.88rem;
+  color: #4338ca;
+  margin-bottom: 0;
+}
+
+/* Cards de componentes */
+.card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-left: 4px solid #4f46e5;
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin-bottom: 12px;
+}
+
+.card h2 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #4f46e5;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  background: #4338ca;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
+}
