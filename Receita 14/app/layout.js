@@ -1,6 +1,8 @@
+import './globals.css';
+
 export const metadata = {
-    title: 'Minha primeira aplicação',
-    description: 'Meu primeiro projeto com Next.js',
+    title: 'Receita 14 - Páginas e Componentes',
+    description: 'Componentes e rotas com Next.js',
 };
 
 export default function RootLayout({ children }) {
