@@ -1,0 +1,20 @@
+{
+    "name":  "receita-19",
+    "version":  "1.0.0",
+    "description":  "",
+    "main":  "index.js",
+    "scripts":  {
+                    "dev":  "next dev",
+                    "test":  "echo \"Error: no test specified\" \u0026\u0026 exit 1",
+                    "build":  "next build",
+                    "start":  "next start"
+                },
+    "keywords":  [
+
+                 ],
+    "author":  "",
+    "license":  "ISC",
+    "dependencies":  {
+                         "next":  "^16.4.5"
+                     }
+}
