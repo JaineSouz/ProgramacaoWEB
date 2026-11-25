@@ -1,10 +1,10 @@
-# 🌐 Programação Web - Receitas de Aprendizado
+# Programação Web - Receitas de Aprendizado
 
 Repositório com as atividades práticas e receitas de desenvolvimento web, cobrindo desde os fundamentos (HTML, CSS e JavaScript) até o desenvolvimento de aplicações completas com **React** e **Next.js**.
 
 ---
 
-## 📂 Estrutura do Repositório
+## Estrutura do Repositório
 
 O projeto é dividido em dois grupos de receitas:
 
@@ -18,17 +18,18 @@ O projeto é dividido em dois grupos de receitas:
 
 ---
 
-## 🚀 Como Executar as Receitas
+## Como Executar as Receitas
 
-### 🔹 Receitas 1 a 12 (HTML / JS / React CDN)
+### Receitas 1 a 12 (HTML / JS / React CDN)
 Essas receitas não precisam de instalação de pacotes:
 1. Abra o arquivo [`index.html`](./index.html) na raiz do repositório em qualquer navegador (dando dois cliques nele ou usando a extensão **Live Server** no VS Code).
 2. Utilize o menu de links para navegar diretamente até a receita desejada.
 
 ---
 
-### 🔹 Receitas 13 em diante (Next.js / npm)
+### Receitas 13 em diante (Next.js / npm)
 Essas receitas são aplicações Next.js e necessitam do **Node.js** e **npm** instalados na máquina.
+- API própria com Route Handlers, Server Actions, rotas dinâmicas e geração estática (SSG).
 
 #### Passo 1: Acesse a pasta da receita desejada no terminal
 Abra o terminal (PowerShell, Prompt de Comando ou terminal integrado do VS Code) na pasta da receita que deseja rodar:
@@ -57,7 +58,7 @@ npm run dev
 #### Passo 4: Acesse no seu navegador
 Assim que o terminal indicar que o servidor está pronto (`Ready in ...`), abra seu navegador e acesse:
 
-👉 **[http://localhost:3000](http://localhost:3000)**
+**[http://localhost:3000](http://localhost:3000)**
 
 > [!TIP]
 > **Como parar o servidor:**  
@@ -65,7 +66,7 @@ Assim que o terminal indicar que o servidor está pronto (`Ready in ...`), abra 
 
 ---
 
-## 📋 Sumário das Receitas
+## Sumário das Receitas
 
 | Receita | Título / Tema Principal | Tecnologias |
 | :--- | :--- | :--- |
@@ -87,3 +88,6 @@ Assim que o terminal indicar que o servidor está pronto (`Ready in ...`), abra 
 | **16** | Next.js: Data Fetching I (Consumo da OMDb API no Servidor) | Next.js / Server Components |
 | **17** | Next.js: Formulário de Pesquisa (Componente `<Form>` e Layout Dinâmico) | Next.js (`next/form`) |
 | **18** | Next.js: Data Fetching e Client Components (`useState`, Memo e Performance) | Next.js (`use client`) / React Hooks |
+| **19**  | Next.js: Implementação de API (Route Handlers com `route.js`)               | Next.js / API Endpoints              |
+| **20**  | Next.js: Server Actions (`use server` e campo de ano)                       | Next.js / Server Actions             |
+| **21**  | Next.js: Rotas Dinâmicas e Geração Estática (SSG)                           | Next.js (`generateStaticParams`)     |
